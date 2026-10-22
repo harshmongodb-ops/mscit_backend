@@ -4,7 +4,7 @@ import secretKey from "../jwtConfig.js"
 function authanticateToken (req,res,next) {
     const authHeader = req.header("Authorization")
     if(!authHeader) {
-        return res.status(401).json({"message":"Authrazation is missing"})
+        return res.status(401).json({"message":"Authrazation is missing    "})
     }
 
     const [bearer,token] = authHeader.split(" ")
